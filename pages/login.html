@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TrendyTees</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/auth-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional login page styles */
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .login-container {
+            display: flex;
+            min-height: calc(100vh - 80px);
+            padding: 60px 20px;
+        }
+        
+        .login-card {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+        }
+        
+        .login-image {
+            flex: 1;
+            background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.8), rgba(46, 204, 113, 0.8)), 
+                              url('../assets/images/tshirt3.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .login-image h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .login-image p {
+            font-size: 1.1rem;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+        
+        .login-form-container {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .login-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .login-tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #999;
+            position: relative;
+        }
+        
+        .login-tab.active {
+            color: #2c3e50;
+        }
+        
+        .login-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            border-radius: 3px 3px 0 0;
+        }
+        
+        .login-form-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .login-form-subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .login-helper {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .login-helper a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .login-helper a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .login-card {
+                flex-direction: column;
+            }
+            
+            .login-image {
+                padding: 30px;
+                min-height: 200px;
+            }
+            
+            .login-form-container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>TrendyTees</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="#" class="icon profile-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-container">
+        <div class="login-card">
+            <div class="login-image">
+                <h2>Welcome to TrendyTees</h2>
+                <p>Sign in to explore our premium collection of t-shirts tailored for your style and comfort.</p>
+            </div>
+            <div class="login-form-container">
+                <div class="login-tabs">
+                    <div class="login-tab active" data-tab="signin">Sign In</div>
+                    <div class="login-tab" data-tab="signup">Sign Up</div>
+                </div>
+                
+                <!-- Sign In Form -->
+                <div class="tab-content active" id="signin-content">
+                    <h2 class="login-form-title">Welcome Back</h2>
+                    <p class="login-form-subtitle">Please sign in to continue shopping</p>
+                    
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" placeholder="Enter your email address" required>
+                            <div class="form-error" id="login-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <div class="password-field">
+                                <input type="password" id="login-password" placeholder="Enter your password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-error" id="login-password-error"></div>
+                        </div>
+                        
+                        <div class="remember-forgot">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember-me">
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="auth-submit">Sign In</button>
+                    </form>
+                    
+                    <div class="auth-separator">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="social-auth">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i> Sign in with Google
+                        </button>
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Sign Up Form -->
+                <div class="tab-content" id="signup-content">
+                    <h2 class="login-form-title">Create Account</h2>
+                    <p class="login-form-subtitle">Join TrendyTees for exclusive offers</p>
+                    
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" placeholder="Enter your full name" required>
+                            <div class="form-error" id="register-name-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" placeholder="Enter your email address" required>
+                            <div class="form-error" id="register-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <div class="password-field">
+                                <input type="password" id="register-password" placeholder="Create a password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-error" id="register-password-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-confirm-password">Confirm Password</label>
+                            <div class="password-field">
+                                <input type="password" id="register-confirm-password" placeholder="Confirm your password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-error" id="register-confirm-password-error"></div>
+                        </div>
+                        
+                        <button type="submit" class="auth-submit">Create Account</button>
+                    </form>
+                    
+                    <div class="auth-separator">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="social-auth">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i> Sign up with Google
+                        </button>
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Sign up with Facebook
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="login-helper" id="signin-helper">
+                    Don't have an account? <a href="#" class="switch-tab" data-tab="signup">Sign Up</a>
+                </div>
+                
+                <div class="login-helper" id="signup-helper" style="display: none;">
+                    Already have an account? <a href="#" class="switch-tab" data-tab="signin">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile notification -->
+    <div class="profile-notification">
+        <i class="fas fa-check-circle"></i>
+        <span>Login successful! Welcome back.</span>
+        <button class="notification-close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Footer would go here -->
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/profile-overlay.js"></script>
+    <script src="../assets/js/login.js"></script>
+</body>
+</html> 

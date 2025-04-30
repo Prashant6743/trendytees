@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - TrendyTees</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/collections.css">
+    <link rel="stylesheet" href="../assets/css/profile-overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>TrendyTees</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="collections.html" class="active">Collections</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="#" class="icon profile-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Parallax Section -->
+    <section class="parallax-hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <h1>Our Collections</h1>
+            <p>Discover premium quality t-shirts for everyone</p>
+        </div>
+    </section>
+
+    <!-- Collection Navigation -->
+    <section class="collection-nav">
+        <div class="container">
+            <ul class="collection-tabs">
+                <li><a href="#mens" class="active">Men's Collection</a></li>
+                <li><a href="#womens">Women's Collection</a></li>
+                <li><a href="#kids">Kids' Collection</a></li>
+            </ul>
+            <div class="filter-container">
+                <button class="filter-button"><i class="fas fa-filter"></i> Filter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Sidebar (Hidden by default, shown when filter button is clicked) -->
+    <div class="filter-sidebar">
+        <div class="filter-header">
+            <h3>Filter Products</h3>
+            <button class="close-filter"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="filter-section">
+            <h4>Price Range</h4>
+            <div class="price-range">
+                <input type="range" min="0" max="100" value="50" class="price-slider">
+                <div class="price-values">
+                    <span>₹0</span>
+                    <span>₹10,000</span>
+                </div>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h4>Colors</h4>
+            <div class="color-filters">
+                <label class="color-filter">
+                    <input type="checkbox" value="black">
+                    <span class="color-dot black"></span>
+                    <span>Black</span>
+                </label>
+                <label class="color-filter">
+                    <input type="checkbox" value="white">
+                    <span class="color-dot white"></span>
+                    <span>White</span>
+                </label>
+                <label class="color-filter">
+                    <input type="checkbox" value="gray">
+                    <span class="color-dot gray"></span>
+                    <span>Gray</span>
+                </label>
+                <label class="color-filter">
+                    <input type="checkbox" value="blue">
+                    <span class="color-dot blue"></span>
+                    <span>Blue</span>
+                </label>
+                <label class="color-filter">
+                    <input type="checkbox" value="red">
+                    <span class="color-dot red"></span>
+                    <span>Red</span>
+                </label>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h4>Size</h4>
+            <div class="size-filters">
+                <label class="size-filter">
+                    <input type="checkbox" value="s">
+                    <span>S</span>
+                </label>
+                <label class="size-filter">
+                    <input type="checkbox" value="m">
+                    <span>M</span>
+                </label>
+                <label class="size-filter">
+                    <input type="checkbox" value="l">
+                    <span>L</span>
+                </label>
+                <label class="size-filter">
+                    <input type="checkbox" value="xl">
+                    <span>XL</span>
+                </label>
+                <label class="size-filter">
+                    <input type="checkbox" value="xxl">
+                    <span>XXL</span>
+                </label>
+            </div>
+        </div>
+        <div class="filter-actions">
+            <button class="apply-filters">Apply Filters</button>
+            <button class="clear-filters">Clear All</button>
+        </div>
+    </div>
+
+    <!-- Men's Collection with Parallax -->
+    <section id="mens" class="collection-section">
+        <div class="parallax-section">
+            <div class="parallax-bg mens-bg"></div>
+            <div class="section-title">
+                <h2>Men's Collection</h2>
+                <p>Premium t-shirts designed for modern men</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="product-grid three-column">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-black-oversized-t-shirt-439421-1734427687-1.jpg" alt="Classic Fit Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/classic-fit-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/classic-fit-tee.html">Classic Fit Tee</a></h3>
+                        <p class="price">₹2,999</p>
+                        <div class="color-options">
+                            <span class="color-dot black"></span>
+                            <span class="color-dot white"></span>
+                            <span class="color-dot gray"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-green-sasuke-graphic-printed-oversized-t-shirt-659575-1743679494-1.jpg" alt="Premium Cotton V-Neck">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/premium-cotton-vneck.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/premium-cotton-vneck.html">Premium Cotton V-Neck</a></h3>
+                        <p class="price">₹3,499</p>
+                        <div class="color-options">
+                            <span class="color-dot navy"></span>
+                            <span class="color-dot black"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-white-introvert-typography-oversized-t-shirt-611250-1741259217-1.jpg" alt="Graphic Print Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/graphic-print-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/graphic-print-tee.html">Graphic Print Tee</a></h3>
+                        <p class="price">₹2,499</p>
+                        <div class="color-options">
+                            <span class="color-dot white"></span>
+                            <span class="color-dot black"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Collection with Parallax -->
+    <section id="womens" class="collection-section">
+        <div class="parallax-section">
+            <div class="parallax-bg womens-bg"></div>
+            <div class="section-title">
+                <h2>Women's Collection</h2>
+                <p>Stylish t-shirts for the modern woman</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="product-grid three-column">
+                <div class="product-card">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/women-s-blue-solemnly-no-good-graphic-printed-oversized-t-shirt-646767-1732627787-1.jpg" alt="Fitted Scoop Neck">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/fitted-scoop-neck.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/fitted-scoop-neck.html">Fitted Scoop Neck</a></h3>
+                        <p class="price">₹2,799</p>
+                        <div class="color-options">
+                            <span class="color-dot white"></span>
+                            <span class="color-dot red"></span>
+                            <span class="color-dot black"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/women-s-black-order-of-the-phoenix-graphic-printed-oversized-t-shirt-589279-1734613604-1.jpg" alt="Relaxed Fit Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/relaxed-fit-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/relaxed-fit-tee.html">Relaxed Fit Tee</a></h3>
+                        <p class="price">₹2,399</p>
+                        <div class="color-options">
+                            <span class="color-dot gray"></span>
+                            <span class="color-dot white"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/women-s-purple-i-decide-my-vibe-graphic-printed-boyfriend-fit-t-shirt-479894-1742902225-1.jpg" alt="Cropped Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/cropped-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/cropped-tee.html">Cropped Tee</a></h3>
+                        <p class="price">₹2,199</p>
+                        <div class="color-options">
+                            <span class="color-dot black"></span>
+                            <span class="color-dot white"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids' Collection with Parallax -->
+    <section id="kids" class="collection-section">
+        <div class="parallax-section">
+            <div class="parallax-bg kids-bg"></div>
+            <div class="section-title">
+                <h2>Kids' Collection</h2>
+                <p>Fun and comfortable t-shirts for children</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="product-grid three-column">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/q/t/y/8-9-years-neuvo-257-rudra-original-imah5gkmzvcetz7a.jpeg?q=70" alt="Fun Graphic Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/fun-graphic-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/fun-graphic-tee.html">Fun Graphic Tee</a></h3>
+                        <p class="price">₹1,599</p>
+                        <div class="color-options">
+                            <span class="color-dot blue"></span>
+                            <span class="color-dot red"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/m/h/f/9-10-years-free-fire-kids-half-sleeve-tshirt-avr-original-imah6ftsb4wc7e4y.jpeg?q=70" alt="Comfort Fit Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/comfort-fit-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/comfort-fit-tee.html">Comfort Fit Tee</a></h3>
+                        <p class="price">₹1,899</p>
+                        <div class="color-options">
+                            <span class="color-dot white"></span>
+                            <span class="color-dot gray"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/n/r/c/4-5-years-boys-strip-polo-hs-white-tb-blue-original-imagyxgyu8fvgmer.jpeg?q=70" alt="Character Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="../products/character-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="../products/character-tee.html">Character Tee</a></h3>
+                        <p class="price">₹1,999</p>
+                        <div class="color-options">
+                            <span class="color-dot red"></span>
+                            <span class="color-dot blue"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Community</h2>
+            <p>Subscribe to our newsletter for exclusive offers and updates</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>TrendyTees offers premium quality t-shirts with unique designs for fashion-conscious individuals.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="collections.html">Shop</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@trendytees.com</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Address: 123 Fashion St, Style City</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrendyTees. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/collections.js"></script>
+    <script src="../assets/js/profile-overlay.js"></script>
+</body>
+</html>

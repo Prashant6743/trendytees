@@ -1,0 +1,156 @@
+/* Shipping Page Styles */
+
+/* Info Summary Section */
+.info-summary {
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.edit-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.edit-link:hover {
+    color: var(--secondary-color);
+}
+
+.info-content {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.info-content p {
+    margin: 5px 0;
+}
+
+.section-divider {
+    height: 1px;
+    background-color: var(--medium-gray);
+    margin: 20px 0;
+}
+
+/* Shipping Methods */
+.shipping-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.shipping-method {
+    position: relative;
+}
+
+.shipping-method input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.shipping-method label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.shipping-method input[type="radio"]:checked + label {
+    border-color: var(--primary-color);
+    background-color: rgba(58, 134, 255, 0.05);
+}
+
+.shipping-method input[type="radio"]:focus + label {
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2);
+}
+
+.method-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.method-name {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.method-description {
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+}
+
+.method-price {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Shipping Method Selection Animation */
+.shipping-method label::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.shipping-method input[type="radio"]:checked + label::before {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    box-shadow: inset 0 0 0 4px white;
+}
+
+.shipping-method label {
+    padding-left: 45px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-header h3 {
+        font-size: 1rem;
+    }
+    
+    .info-content {
+        font-size: 0.9rem;
+    }
+    
+    .method-name {
+        font-size: 0.95rem;
+    }
+    
+    .method-description {
+        font-size: 0.8rem;
+    }
+}

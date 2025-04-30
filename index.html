@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendyTees - Modern T-Shirt Store</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/profile-overlay.css">
+    <link rel="stylesheet" href="assets/css/auth-modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>TrendyTees</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/collections.html">Collections</a>
+                <a href="http://localhost:5173" target="_blank">Customize</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/contact.html">Contact Us</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="icon"><i class="fas fa-search"></i></a>
+                <a href="pages/cart.html" class="icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="pages/login.html" class="icon profile-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Express Your Style</h1>
+            <p>Discover our exclusive collection of premium t-shirts</p>
+            <a href="pages/collections.html" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="featured">
+        <h2>Featured Collection</h2>
+        
+        <!-- Featured Highlights -->
+        <div class="featured-highlights">
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="highlight-content">
+                    <h3>Free Shipping</h3>
+                    <p>On all orders over ₹4,000</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-undo"></i>
+                </div>
+                <div class="highlight-content">
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="highlight-content">
+                    <h3>Secure Checkout</h3>
+                    <p>100% Protected Payments</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="highlight-content">
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer service</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New Arrivals -->
+        <div class="collection-section">
+            <h3>New Arrivals</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t1080/men-s-white-akatsuki-logo-graphic-printed-oversized-t-shirt-659594-1744633517-1.jpg" alt="Classic White Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/classic-white-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/classic-white-tee.html">Classic White Tee</a></h3>
+                        <p class="price">₹499</p>
+                        <div class="color-options">
+                            <span class="color-dot white"></span>
+                            <span class="color-dot black"></span>
+                            <span class="color-dot gray"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-black-batman-outline-logo-graphic-printed-oversized-t-shirt-519159-1734686072-1.jpg" alt="Urban Street Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/urban-street-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/urban-street-tee.html">Urban Street Tee</a></h3>
+                        <p class="price">₹599</p>
+                        <div class="color-options">
+                            <span class="color-dot black"></span>
+                            <span class="color-dot navy"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-red-moon-rider-graphic-printed-oversized-t-shirt-502017-1737092523-1.jpg" alt="Vintage Print Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/vintage-print-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/vintage-print-tee.html">Vintage Print Tee</a></h3>
+                        <p class="price">₹649</p>
+                        <div class="color-options">
+                            <span class="color-dot beige"></span>
+                            <span class="color-dot brown"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Sellers -->
+        <div class="collection-section">
+            <h3>Best Sellers</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">Top Rated</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-navy-blue-venom-graphic-printed-oversized-t-shirt-651227-1735623006-1.gif" alt="Premium Cotton Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/premium-cotton-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/premium-cotton-tee.html">Premium Cotton Tee</a></h3>
+                        <p class="price">₹549</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-blue-seek-balance-graphic-printed-oversized-t-shirt-580211-1734699031-1.jpg" alt="Essential V-Neck">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/essential-v-neck.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/essential-v-neck.html">Essential V-Neck</a></h3>
+                        <p class="price">₹599</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(95)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/women-s-black-friends-feelings-t-j-graphic-printed-oversized-t-shirt-591334-1736761668-1.jpg" alt="Graphic Design Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/graphic-design-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/graphic-design-tee.html">Graphic Design Tee</a></h3>
+                        <p class="price">₹699</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(76)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limited Edition -->
+        <div class="collection-section">
+            <h3>Limited Edition</h3>
+            <div class="product-grid three-column">
+                <div class="product-card limited-edition">
+                    <div class="product-badge special">Limited Edition</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-grey-eternity-graphic-printed-oversized-t-shirt-596129-1735645993-1.jpg" alt="Artist Collab Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/artist-collab-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/artist-collab-tee.html">Artist Collab Tee</a></h3>
+                        <p class="price">₹649</p>
+                        <div class="stock-info">
+                            <span class="stock-count">Only 15 left</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card limited-edition">
+                    <div class="product-badge special">Limited Edition</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-brown-beast-within-graphic-printed-oversized-t-shirt-581508-1739174350-1.jpg" alt="Seasonal Edition">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/seasonal-edition.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/seasonal-edition.html">Seasonal Edition</a></h3>
+                        <p class="price">₹679</p>
+                        <div class="stock-info">
+                            <span class="stock-count">Only 8 left</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card limited-edition">
+                    <div class="product-badge special">Limited Edition</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-blue-founder-aagaye-oye-typography-oversized-t-shirt-676097-1744280774-1.jpg" alt="Designer Collab Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/designer-collab-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/designer-collab-tee.html">Designer Collab Tee</a></h3>
+                        <p class="price">₹599</p>
+                        <div class="stock-info">
+                            <span class="stock-count">Only 5 left</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Collection -->
+        <div class="collection-section">
+            <h3>Trending Styles</h3>
+            <div class="product-grid three-column">
+                <div class="product-card trending-card">
+                    <div class="product-badge trending">Most Popular</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-gardenia-who-cares-graphic-printed-oversized-t-shirt-646664-1737366162-1.jpg" alt="Oversized Streetwear Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/oversized-streetwear-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/oversized-streetwear-tee.html">Oversized Streetwear Tee</a></h3>
+                        <p class="price">₹499</p>
+                        <div class="trending-meta">
+                            <span class="trending-stat"><i class="fas fa-fire"></i> 250+ sold this week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card trending-card">
+                    <div class="product-badge trending">Trending</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/men-s-white-vengeance-graphic-printed-oversized-t-shirt-624560-1741326192-1.jpg" alt="Minimalist Logo Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/minimalist-logo-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/minimalist-logo-tee.html">Minimalist Logo Tee</a></h3>
+                        <p class="price">₹549</p>
+                        <div class="trending-meta">
+                            <span class="trending-stat"><i class="fas fa-fire"></i> 120+ sold this week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card trending-card">
+                    <div class="product-badge trending">Hot Item</div>
+                    <div class="product-image">
+                        <img src="https://images.bewakoof.com/t640/women-s-black-mickey-graphic-printed-oversized-t-shirt-581989-1726046921-1.jpg" alt="Retro Graphic Tee">
+                        <div class="product-overlay">
+                            <div class="overlay-actions">
+                                <button class="action-btn add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                <button class="action-btn add-to-wishlist"><i class="fas fa-heart"></i> Wishlist</button>
+                                <a href="products/retro-graphic-tee.html" class="action-btn view-details"><i class="fas fa-eye"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="products/retro-graphic-tee.html">Retro Graphic Tee</a></h3>
+                        <p class="price">₹499</p>
+                        <div class="trending-meta">
+                            <span class="trending-stat"><i class="fas fa-fire"></i> 85+ sold this week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="https://images.bewakoof.com/t640/men-s-white-keep-listening-typography-t-shirt-465268-1738219111-1.jpg" alt="Men's Collection">
+                <h3>Men's Collection</h3>
+            </div>
+            <div class="category-card">
+                <img src="https://images.bewakoof.com/t640/women-s-pink-sea-u-never-graphic-printed-oversized-t-shirt-585499-1734685988-1.jpg" alt="Women's Collection">
+                <h3>Women's Collection</h3>
+            </div>
+            <div class="category-card">
+                <img src="https://images.bewakoof.com/t640/men-s-black-oversized-vest-500149-1671022126-1.jpg" alt="Limited Edition">
+                <h3>Limited Edition</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive offers and updates</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>TrendyTees offers premium quality t-shirts with unique designs for fashion-conscious individuals.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="pages/collections.html">Shop</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@trendytees.com</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Address: 123 Fashion St, Style City</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrendyTees. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/profile-overlay.js"></script>
+</body>
+</html>

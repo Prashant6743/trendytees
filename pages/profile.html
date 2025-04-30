@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | TrendyTees</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link rel="stylesheet" href="../assets/css/profile-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html" class="gradient-text">TrendyTees</a>
+            <span class="logo-accent"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link"><span class="nav-link-text">Home</span></a></li>
+            <li><a href="collections.html" class="nav-link"><span class="nav-link-text">Collections</span></a></li>
+            <li><a href="about.html" class="nav-link"><span class="nav-link-text">About</span></a></li>
+            <li><a href="contact.html" class="nav-link"><span class="nav-link-text">Contact</span></a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="profile-header-content">
+            <div class="profile-avatar">
+                <div class="avatar-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <button class="edit-avatar-btn">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+            <div class="profile-info">
+                <h1>Welcome, <span class="username">Alex Johnson</span></h1>
+                <p class="member-since">Member since April 2024</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Orders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Wishlist</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">2</span>
+                        <span class="stat-label">Reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="settings-btn">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </button>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Dashboard -->
+    <div class="profile-dashboard">
+        <div class="dashboard-tabs">
+            <button class="tab-btn active" data-tab="orders">
+                <i class="fas fa-box"></i>
+                My Orders
+            </button>
+            <button class="tab-btn" data-tab="wishlist">
+                <i class="fas fa-heart"></i>
+                Wishlist
+            </button>
+            <button class="tab-btn" data-tab="track">
+                <i class="fas fa-truck"></i>
+                Track Order
+            </button>
+            <button class="tab-btn" data-tab="settings">
+                <i class="fas fa-user-cog"></i>
+                Account
+            </button>
+            <button class="tab-btn" data-tab="help">
+                <i class="fas fa-question-circle"></i>
+                Help
+            </button>
+        </div>
+
+        <div class="dashboard-content">
+            <!-- Orders Tab -->
+            <div class="tab-content active" id="orders-tab">
+                <h2 class="section-title">My Orders</h2>
+                <div class="orders-list">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-id">
+                                <span class="label">Order #</span>
+                                <span class="value">TT-2025-8742</span>
+                            </div>
+                            <div class="order-date">
+                                <span class="label">Placed on</span>
+                                <span class="value">April 10, 2025</span>
+                            </div>
+                            <div class="order-status delivered">
+                                <i class="fas fa-check-circle"></i>
+                                Delivered
+                            </div>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="https://images.bewakoof.com/t640/men-s-black-oversized-t-shirt-439421-1734427687-1.jpg" alt="T-shirt">
+                                <div class="item-details">
+                                    <h4>Vintage Graphic Tee</h4>
+                                    <p>Size: M | Color: Blue | Qty: 1</p>
+                                    <span class="item-price">₹499</span>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <img src="../assets/images/tshirt2.jpg" alt="T-shirt">
+                                <div class="item-details">
+                                    <h4>Urban Street Tee</h4>
+                                    <p>Size: L | Color: Black | Qty: 2</p>
+                                    <span class="item-price">₹649</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <div class="order-total">
+                                <span class="label">Total</span>
+                                <span class="value">₹1,148</span>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-track">Track Order</button>
+                                <button class="btn-reorder">Reorder</button>
+                                <button class="btn-review">Write Review</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-id">
+                                <span class="label">Order #</span>
+                                <span class="value">TT-2025-6531</span>
+                            </div>
+                            <div class="order-date">
+                                <span class="label">Placed on</span>
+                                <span class="value">March 22, 2025</span>
+                            </div>
+                            <div class="order-status shipped">
+                                <i class="fas fa-shipping-fast"></i>
+                                Shipped
+                            </div>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="../assets/images/tshirt3.jpg" alt="T-shirt">
+                                <div class="item-details">
+                                    <h4>Premium Cotton Tee</h4>
+                                    <p>Size: S | Color: White | Qty: 1</p>
+                                    <span class="item-price">₹599</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <div class="order-total">
+                                <span class="label">Total</span>
+                                <span class="value">₹599</span>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-track">Track Order</button>
+                                <button class="btn-reorder">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wishlist Tab -->
+            <div class="tab-content" id="wishlist-tab">
+                <h2 class="section-title">My Wishlist</h2>
+                <div class="wishlist-grid">
+                    <div class="wishlist-item">
+                        <div class="wishlist-item-image">
+                            <img src="../assets/images/tshirt4.jpg" alt="T-shirt">
+                            <button class="remove-wishlist">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-item-details">
+                            <h3>Minimalist Logo Tee</h3>
+                            <div class="wishlist-item-price">₹549</div>
+                            <div class="wishlist-item-meta">
+                                <span class="availability in-stock">In Stock</span>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="wishlist-item-image">
+                            <img src="../assets/images/tshirt5.jpg" alt="T-shirt">
+                            <button class="remove-wishlist">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-item-details">
+                            <h3>Retro Wave Graphic Tee</h3>
+                            <div class="wishlist-item-price">₹599</div>
+                            <div class="wishlist-item-meta">
+                                <span class="availability in-stock">In Stock</span>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="wishlist-item-image">
+                            <img src="../assets/images/tshirt6.jpg" alt="T-shirt">
+                            <button class="remove-wishlist">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-item-details">
+                            <h3>Eco-Friendly Cotton Blend</h3>
+                            <div class="wishlist-item-price">₹499</div>
+                            <div class="wishlist-item-meta">
+                                <span class="availability low-stock">Low Stock</span>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track Order Tab -->
+            <div class="tab-content" id="track-tab">
+                <h2 class="section-title">Track Your Order</h2>
+                <div class="tracking-container">
+                    <div class="tracking-form">
+                        <div class="form-group">
+                            <label for="order-id">Order Number</label>
+                            <input type="text" id="order-id" placeholder="Enter your order number (e.g., TT-2025-8742)">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email address">
+                        </div>
+                        <button class="track-btn">Track Now</button>
+                    </div>
+
+                    <div class="tracking-result">
+                        <div class="tracking-header">
+                            <h3>Order #TT-2025-6531</h3>
+                            <span class="estimated-delivery">Estimated Delivery: April 15, 2025</span>
+                        </div>
+                        
+                        <div class="tracking-timeline">
+                            <div class="timeline-item completed">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Order Placed</h4>
+                                    <p>March 22, 2025 at 2:30 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item completed">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Order Processed</h4>
+                                    <p>March 23, 2025 at 10:15 AM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item completed">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Shipped</h4>
+                                    <p>March 24, 2025 at 3:45 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item active">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>In Transit</h4>
+                                    <p>April 12, 2025 at 9:20 AM</p>
+                                    <div class="timeline-details">
+                                        <span>Your package is on its way to the delivery address</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Delivered</h4>
+                                    <p>Expected by April 15, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tracking-map">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Live package tracking map would appear here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Settings Tab -->
+            <div class="tab-content" id="settings-tab">
+                <h2 class="section-title">Account Settings</h2>
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" value="Alex Johnson">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-settings">Email Address</label>
+                            <input type="email" id="email-settings" value="alex.johnson@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="+1 (555) 123-4567">
+                        </div>
+                        <button class="save-btn">Save Changes</button>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Shipping Address</h3>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" value="123 Fashion Street">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" value="Styleville">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" value="CA">
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" value="90210">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" value="United States">
+                        </div>
+                        <button class="save-btn">Save Address</button>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Password & Security</h3>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" placeholder="Enter current password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" placeholder="Confirm new password">
+                        </div>
+                        <button class="save-btn">Update Password</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help Tab -->
+            <div class="tab-content" id="help-tab">
+                <h2 class="section-title">Help & Support</h2>
+                <div class="help-container">
+                    <div class="help-section faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h4>How do I return an item?</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>To return an item, go to your order history, select the order containing the item you wish to return, and click the "Return Item" button. Follow the instructions to generate a return label. You have 30 days from the delivery date to initiate a return.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h4>What is your shipping policy?</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>We offer free standard shipping on all orders over ₹999. Standard shipping typically takes 3-5 business days. Expedited shipping options are available at checkout for an additional fee.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h4>How can I change my order?</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>You can modify your order within 1 hour of placing it. Go to your order history, select the recent order, and click "Modify Order." Once an order has been processed, it cannot be modified, but you can return it after delivery.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h4>Do you offer international shipping?</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by location. Import duties and taxes may apply and are the responsibility of the customer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-section contact-section">
+                        <h3>Contact Support</h3>
+                        <div class="contact-options">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h4>Email Support</h4>
+                                <p>Get a response within 24 hours</p>
+                                <a href="mailto:support@trendytees.com" class="contact-link">support@trendytees.com</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <h4>Phone Support</h4>
+                                <p>Available 9AM-6PM EST, Mon-Fri</p>
+                                <a href="tel:+18005551234" class="contact-link">1-800-555-1234</a>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <h4>Live Chat</h4>
+                                <p>Chat with our support team</p>
+                                <button class="chat-btn">Start Chat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrendyTees</h3>
+                <p>Your destination for premium quality t-shirts with unique designs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrendyTees. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/profile.js"></script>
+</body>
+</html>

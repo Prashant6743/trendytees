@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TrendyTees</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+    <link rel="stylesheet" href="../assets/css/profile-overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>TrendyTees</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#search" class="icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="#" class="icon profile-icon"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Progress -->
+    <div class="checkout-progress">
+        <div class="progress-container">
+            <div class="progress-step active">
+                <div class="step-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="step-label">Cart</div>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="progress-step active">
+                <div class="step-icon">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <div class="step-label">Information</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="step-label">Shipping</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="step-label">Payment</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Main Content -->
+    <div class="checkout-container">
+        <div class="checkout-main">
+            <!-- Customer Information Form -->
+            <div class="checkout-section">
+                <h2>Contact Information</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone (optional)</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="Phone number">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Keep me updated with news and exclusive offers</label>
+                </div>
+            </div>
+
+            <!-- Shipping Address Form -->
+            <div class="checkout-section">
+                <h2>Shipping Address</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Street address" required>
+                </div>
+                <div class="form-group">
+                    <label for="apartment">Apartment, suite, etc. (optional)</label>
+                    <input type="text" id="apartment" placeholder="Apartment, suite, etc.">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" required>
+                            <option value="">Select country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="IN">India</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State/Province</label>
+                        <select id="state" required>
+                            <option value="">Select state</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <!-- More states would be added here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP/Postal Code</label>
+                        <input type="text" id="zip" placeholder="ZIP / Postal code" required>
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="save-info">
+                    <label for="save-info">Save this information for next time</label>
+                </div>
+                <div class="checkout-actions">
+                    <a href="cart.html" class="back-link"><i class="fas fa-chevron-left"></i> Return to cart</a>
+                    <button id="continue-to-shipping" class="btn primary-btn">Continue to Shipping</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-header">
+                <span>Product</span>
+                <span>Total</span>
+            </div>
+            <div class="summary-items" id="summary-items">
+                <!-- Items will be dynamically added here -->
+            </div>
+            <div class="promo-code">
+                <div class="promo-input">
+                    <input type="text" id="promo-code" placeholder="Promo code">
+                    <button id="apply-promo" class="btn secondary-btn">Apply</button>
+                </div>
+            </div>
+            <div class="summary-totals">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">Calculated at next step</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span id="tax">Calculated at next step</span>
+                </div>
+            </div>
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="total">₹0.00</span>
+            </div>
+            <div class="payment-methods">
+                <p>We accept:</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Overlay -->
+    <div class="profile-overlay">
+        <div class="overlay-content">
+            <div class="overlay-header">
+                <h2>My Account</h2>
+                <button class="close-overlay"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="overlay-links">
+                <a href="profile.html" class="overlay-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="profile.html#orders" class="overlay-link">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>My Orders</span>
+                </a>
+                <a href="profile.html#wishlist" class="overlay-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                </a>
+                <a href="profile.html#settings" class="overlay-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="overlay-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>TrendyTees</h3>
+                <p>Premium quality t-shirts for every style and occasion.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="collections.html">All Collections</a></li>
+                    <li><a href="collections.html?category=men">Men</a></li>
+                    <li><a href="collections.html?category=women">Women</a></li>
+                    <li><a href="collections.html?category=sale">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and once-in-a-lifetime deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrendyTees. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/profile-overlay.js"></script>
+    <script src="../assets/js/checkout.js"></script>
+</body>
+</html>

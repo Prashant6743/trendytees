@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping - TrendyTees</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+    <link rel="stylesheet" href="../assets/css/shipping.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Checkout Progress -->
+    <div class="checkout-progress">
+        <div class="progress-container">
+            <div class="progress-step active">
+                <div class="step-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="step-label">Cart</div>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="progress-step active">
+                <div class="step-icon">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <div class="step-label">Information</div>
+            </div>
+            <div class="progress-line active"></div>
+            <div class="progress-step active">
+                <div class="step-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="step-label">Shipping</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="step-label">Payment</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Main Content -->
+    <div class="checkout-container">
+        <div class="checkout-main">
+            <!-- Contact & Shipping Information Summary -->
+            <div class="checkout-section info-summary">
+                <div class="section-header">
+                    <h3>Contact Information</h3>
+                    <a href="checkout.html" class="edit-link"><i class="fas fa-pencil-alt"></i> Edit</a>
+                </div>
+                <div class="info-content" id="contact-info-summary">
+                    <!-- Will be filled dynamically -->
+                </div>
+                
+                <div class="section-divider"></div>
+                
+                <div class="section-header">
+                    <h3>Shipping Address</h3>
+                    <a href="checkout.html" class="edit-link"><i class="fas fa-pencil-alt"></i> Edit</a>
+                </div>
+                <div class="info-content" id="shipping-info-summary">
+                    <!-- Will be filled dynamically -->
+                </div>
+            </div>
+
+            <!-- Shipping Methods -->
+            <div class="checkout-section">
+                <h2>Shipping Method</h2>
+                <div class="shipping-methods">
+                    <div class="shipping-method">
+                        <input type="radio" name="shipping-method" id="standard" value="standard" checked>
+                        <label for="standard">
+                            <div class="method-details">
+                                <div class="method-name">Standard Shipping</div>
+                                <div class="method-description">3-5 business days</div>
+                            </div>
+                            <div class="method-price">₹499</div>
+                        </label>
+                    </div>
+                    
+                    <div class="shipping-method">
+                        <input type="radio" name="shipping-method" id="express" value="express">
+                        <label for="express">
+                            <div class="method-details">
+                                <div class="method-name">Express Shipping</div>
+                                <div class="method-description">2-3 business days</div>
+                            </div>
+                            <div class="method-price">₹999</div>
+                        </label>
+                    </div>
+                    
+                    <div class="shipping-method">
+                        <input type="radio" name="shipping-method" id="overnight" value="overnight">
+                        <label for="overnight">
+                            <div class="method-details">
+                                <div class="method-name">Overnight Shipping</div>
+                                <div class="method-description">Next business day</div>
+                            </div>
+                            <div class="method-price">₹1,999</div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="checkout-actions">
+                    <a href="checkout.html" class="back-link"><i class="fas fa-chevron-left"></i> Return to information</a>
+                    <button id="continue-to-payment" class="btn primary-btn">Continue to Payment</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-header">
+                <span>Product</span>
+                <span>Total</span>
+            </div>
+            <div class="summary-items" id="summary-items">
+                <!-- Will be filled dynamically -->
+            </div>
+            <div class="promo-code">
+                <div class="promo-input">
+                    <input type="text" id="promo-code" placeholder="Promo code">
+                    <button id="apply-promo" class="btn secondary-btn">Apply</button>
+                </div>
+            </div>
+            <div class="summary-totals">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping-cost">₹499</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span id="tax">₹0.00</span>
+                </div>
+            </div>
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="total">₹0.00</span>
+            </div>
+            <div class="payment-methods">
+                <p>We accept:</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/shipping.js"></script>
+</body>
+</html>
